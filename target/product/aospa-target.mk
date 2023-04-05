@@ -53,6 +53,10 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Audio
+ifeq ($(TARGET_DISABLES_GMS), true)
+$(call inherit-product, frameworks/base/data/sounds/AllAudio.mk)
+endif
+
 # Increase volume level steps
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.config.media_vol_steps=30
@@ -64,6 +68,12 @@ $(call inherit-product, vendor/aospa/bootanimation/bootanimation.mk)
 ifeq ($(TARGET_DISABLES_GMS), true)
 PRODUCT_PACKAGES += \
     vendor_charger_res_images
+endif
+
+# Charger
+ifeq ($(TARGET_DISABLES_GMS), true)
+PRODUCT_PACKAGES += \
+    charger_res_images_vendor
 endif
 
 # curl
@@ -113,11 +123,14 @@ PRODUCT_PACKAGES += \
 
 # Google - GMS, Pixel, and Mainline Modules
 ifneq ($(TARGET_DISABLES_GMS), true)
+$(warning Building With GMS)
 $(call inherit-product, vendor/google/gms/config.mk)
 $(call inherit-product, vendor/google/pixel/config.mk)
 ifneq ($(TARGET_EXCLUDE_GMODULES), true)
 $(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules.mk)
 endif
+else
+$(warning Building Without GMS)
 endif
 
 # HIDL
