@@ -46,9 +46,11 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # Boot Animation
 $(call inherit-product, vendor/aospa/bootanimation/bootanimation.mk)
 
-# Camera
+# Charger
+ifeq ($(TARGET_DISABLES_GMS), true)
 PRODUCT_PACKAGES += \
-    GoogleCameraGo
+    vendor_charger_res_images
+endif
 
 # curl
 PRODUCT_PACKAGES += \
