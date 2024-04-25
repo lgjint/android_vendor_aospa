@@ -23,6 +23,9 @@ PRODUCT_PACKAGES += initial-package-stopped-states-aosp.xml
 PRODUCT_PACKAGES += \
     DuckDuckGo
 
+# Fossify
+$(call inherit-product, vendor/aospa/prebuilt/Fossify/packages.mk)
+
 # AOSPA Version.
 $(call inherit-product, vendor/aospa/target/product/version.mk)
 
