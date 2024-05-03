@@ -19,6 +19,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Some CTS test case failed after enabling feature config_stopSystemPackagesByDefault
 PRODUCT_PACKAGES += initial-package-stopped-states-aosp.xml
 
+# MulchWebView
+PRODUCT_PACKAGES += \
+	MulchWebview
+
 # DuckDuckGo
 PRODUCT_PACKAGES += \
     DuckDuckGo
@@ -237,8 +241,8 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils_prd.xml
 
 # Telephony - AOSP
-PRODUCT_PACKAGES += \
-    Stk
+# PRODUCT_PACKAGES += \
+#     Stk
 
 PRODUCT_BOOT_JARS += \
     tcmiface \
