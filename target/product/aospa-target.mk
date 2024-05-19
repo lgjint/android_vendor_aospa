@@ -31,6 +31,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DuckDuckGo
 
+# MicroG
+PRODUCT_PACKAGES += \
+	GmsCore \
+	GsfProxy \
+	FakeStore
+
 # Fossify
 $(call inherit-product, vendor/aospa/prebuilt/Fossify/packages.mk)
 
