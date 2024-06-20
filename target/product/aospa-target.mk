@@ -41,6 +41,10 @@ PRODUCT_PACKAGES += \
 	GsfProxy \
 	FakeStore
 
+# Lawnchair
+PRODUCT_PACKAGES += \
+	Lawnchair
+
 # Fossify
 $(call inherit-product, vendor/aospa/prebuilt/Fossify/packages.mk)
 
