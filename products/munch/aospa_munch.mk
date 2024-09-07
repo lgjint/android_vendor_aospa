@@ -30,6 +30,9 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := POCO F4
 PRODUCT_NAME := aospa_munch
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="munch-user 13 RKQ1.211001.001 V816.0.2.0.ULMMIXM release-keys"
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Boot animation resolution.
