@@ -31,9 +31,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	MulchWebview
 
-# DuckDuckGo
+# Cromite
 PRODUCT_PACKAGES += \
-    DuckDuckGo
+    Cromite
 
 # MicroG
 PRODUCT_PACKAGES += \
